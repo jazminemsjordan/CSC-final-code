@@ -2,6 +2,8 @@ import status_module
 # test comment
 
 def check_commands(command):
+"""Compares player input to a list of possible gameplay commands.
+If command is valid, runs function command; else, it returns “invalid input” string and prompts the user to enter something else"""
     if command in status_module.command_list:
         if command == "go":
             direction = input("Where would you like to go?")
@@ -24,6 +26,9 @@ def get_input():
         
 
 def go(direction):
+""" Player input a string of direction to move (north, south, west, east).
+If the input is valid (available direction - path is available, not locked), move the player in the input direction; else, returns “unavailable direction” string and prompts user to enter a different direction
+"""
     global location
     if direction != "north" and direction != "east" and direction != "south" and direction != "west":
         return "Failed: not a valid direction."
@@ -38,6 +43,9 @@ def go(direction):
                 return "win"
         else:
             return "Failed: you can't go that way."
+    
+    # Checking player's location and give available direction for each location
+    # If direction is valid, update location
     if location == "atrium":
         if direction == "north":
             location = "classroom_1"
@@ -116,8 +124,9 @@ def go(direction):
         else:
             return "Failed: you can't go that way."
 
-
 def look():
+""" Provide a description of the player's current location (based on the location variable from go(direction)), including exits, interactable objects
+"""
     if location == "vestibule":
         return status_module.vestibule_flavor
     if location == "atrium":
@@ -138,6 +147,9 @@ def look():
         return status_module.balcony_flavor
     
 def examine(subject):
+""" Player input a string of a subject to examine. 
+If the input is valid (subject is available in location), let player interact with each object (open, close, display item available, etc).
+"""
     if location == "atrium" and subject in status_module.atrium_objects:
     elif location == "vestibule" and subject in status_module.vestibule_objects:
     elif location == "classroom_1" and subject in status_module.classroom_1_objects:   
@@ -148,8 +160,13 @@ def examine(subject):
     elif location == "classroom_3" and subject in status_module.classroom_3_objects:
     elif location == "dean_office" and subject in status_module.dean_office_objects:
 
-# Choose item to use at targeted subject
+
 def use(item, subject):
+""" Player input a string of the name of item want to use and a string of the name of the targetted subject.
+If the input is valid - the item available in inventory and the target is an interactable object in the room, modify game state based on item effect 
+(eg. unlock door → new available direction for move)
+Remove item from inventory after use and show the available items in the inventory.
+"""
     if item in status_module.inventory:
         if location == "atrium" and subject in status_module.atrium_objects:
             if status_module.item_pairs[item] == subject:
