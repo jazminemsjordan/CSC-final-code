@@ -140,6 +140,7 @@ def look():
 def examine(subject):
     pass
 
+# choose item to use subject
 def use(item, subject):
     if item in status_module.inventory:
         if location == "atrium" and subject in status_module.atrium_objects:
