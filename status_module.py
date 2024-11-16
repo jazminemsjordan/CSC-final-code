@@ -1,6 +1,14 @@
-locked = {"supply_closet": True, "classroom_2": True, "classroom_3": True, "dean_office": True}
-
-location = "vestibule"
+def initialize():
+    global location
+    location = "vestibule"
+    global locked
+    locked = {"supply_closet": True, "classroom_2": True, "classroom_3": True, "dean_office": True}
+    global item_pairs
+    item_pairs = {"old key": "old door", "keycard": "keycard door", "rusty key": "rusty door", "shiny key": "shiny door", "gold key": "gold door"}
+    global inventory
+    inventory = []
+    global win 
+    win = False
 
 vestibule_flavor = "text"
 vestibule_objects = []
@@ -30,11 +38,5 @@ balcony_flavor = ""
 balcony_objects = []
 
 
-
-
-
 command_list = ["go", "look", "examine", "use"]
 
-item_pairs = {"old key": "old door", "keycard": "keycard door", "rusty key": "rusty door", "shiny key": "shiny door", "gold key": "gold door"}
-
-inventory = []

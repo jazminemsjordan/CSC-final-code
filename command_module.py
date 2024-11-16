@@ -2,8 +2,8 @@ import status_module
 # test comment
 
 def check_commands(command):
-"""Compares player input to a list of possible gameplay commands.
-If command is valid, runs function command; else, it returns “invalid input” string and prompts the user to enter something else"""
+    """Compares player input to a list of possible gameplay commands.
+    If command is valid, runs function command; else, it returns “invalid input” string and prompts the user to enter something else"""
     if command in status_module.command_list:
         if command == "go":
             direction = input("Where would you like to go?")
@@ -12,7 +12,7 @@ If command is valid, runs function command; else, it returns “invalid input”
             return look()
         if command == "examine":
             object = input("What would you like to examine?")
-            return examine(object):
+            return examine(object)
 
     else:
         return "Failed: not a valid command."
@@ -26,7 +26,7 @@ def get_input():
         
 
 def go(direction):
-""" Player input a string of direction to move (north, south, west, east).
+    """ Player input a string of direction to move (north, south, west, east).
 If the input is valid (available direction - path is available, not locked), move the player in the input direction; else, returns “unavailable direction” string and prompts user to enter a different direction
 """
     global location
@@ -100,7 +100,7 @@ If the input is valid (available direction - path is available, not locked), mov
                 location = "dean_office"
                 return "Success!"
         if direction == "south":
-            location = "balcony":
+            location = "balcony"
             return "Success!"
         if direction == "west":
             location = "atrium"
@@ -125,7 +125,7 @@ If the input is valid (available direction - path is available, not locked), mov
             return "Failed: you can't go that way."
 
 def look():
-""" Provide a description of the player's current location (based on the location variable from go(direction)), including exits, interactable objects
+    """ Provide a description of the player's current location (based on the location variable from go(direction)), including exits, interactable objects
 """
     if location == "vestibule":
         return status_module.vestibule_flavor
@@ -147,22 +147,31 @@ def look():
         return status_module.balcony_flavor
     
 def examine(subject):
-""" Player input a string of a subject to examine. 
+    """ Player input a string of a subject to examine. 
 If the input is valid (subject is available in location), let player interact with each object (open, close, display item available, etc).
 """
     if location == "atrium" and subject in status_module.atrium_objects:
+        pass
     elif location == "vestibule" and subject in status_module.vestibule_objects:
-    elif location == "classroom_1" and subject in status_module.classroom_1_objects:   
+        pass
+    elif location == "classroom_1" and subject in status_module.classroom_1_objects: 
+        pass  
     elif location == "supply_closet" and subject in status_module.supply_closet_objects:
+        pass
     elif location == "classroom_2" and subject in status_module.classroom_2_objects:
+        pass
     elif location == "library" and subject in status_module.library_objects:
+        pass
     elif location == "balcony" and subject in status_module.balcony_objects:
+        pass
     elif location == "classroom_3" and subject in status_module.classroom_3_objects:
+        pass
     elif location == "dean_office" and subject in status_module.dean_office_objects:
+        pass
 
 
 def use(item, subject):
-""" Player input a string of the name of item want to use and a string of the name of the targetted subject.
+    """ Player input a string of the name of item want to use and a string of the name of the targetted subject.
 If the input is valid (item available in inventory and the target is an interactable object at location), modify game state based on item effect 
 (eg. unlock door → new available direction for move).
 Remove item from inventory after use and show the available items in the inventory.
@@ -219,3 +228,4 @@ Remove item from inventory after use and show the available items in the invento
             return "Failed: you don't see that in this room."
     else:
         return "Failed: you don't have that with you."
+    
