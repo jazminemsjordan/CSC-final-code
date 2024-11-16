@@ -138,7 +138,15 @@ def look():
         return status_module.balcony_flavor
     
 def examine(subject):
-    pass
+    if location == "atrium" and subject in status_module.atrium_objects:
+    elif location == "vestibule" and subject in status_module.vestibule_objects:
+    elif location == "classroom_1" and subject in status_module.classroom_1_objects:   
+    elif location == "supply_closet" and subject in status_module.supply_closet_objects:
+    elif location == "classroom_2" and subject in status_module.classroom_2_objects:
+    elif location == "library" and subject in status_module.library_objects:
+    elif location == "balcony" and subject in status_module.balcony_objects:
+    elif location == "classroom_3" and subject in status_module.classroom_3_objects:
+    elif location == "dean_office" and subject in status_module.dean_office_objects:
 
 # Choose item to use at targeted subject
 def use(item, subject):
