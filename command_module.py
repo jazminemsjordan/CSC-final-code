@@ -163,11 +163,13 @@ If the input is valid (subject is available in location), let player interact wi
 
 def use(item, subject):
 """ Player input a string of the name of item want to use and a string of the name of the targetted subject.
-If the input is valid - the item available in inventory and the target is an interactable object in the room, modify game state based on item effect 
-(eg. unlock door → new available direction for move)
+If the input is valid (item available in inventory and the target is an interactable object at location), modify game state based on item effect 
+(eg. unlock door → new available direction for move).
 Remove item from inventory after use and show the available items in the inventory.
 """
+    # Check if item is available in inventory
     if item in status_module.inventory:
+        # Check if the target in an interactable object at location
         if location == "atrium" and subject in status_module.atrium_objects:
             if status_module.item_pairs[item] == subject:
                 pass
