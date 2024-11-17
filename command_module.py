@@ -27,8 +27,9 @@ def get_input():
 
 def go(direction):
     """ Player input a string of direction to move (north, south, west, east).
-If the input is valid (available direction - path is available, not locked), move the player in the input direction; else, returns “unavailable direction” string and prompts user to enter a different direction
-"""
+    If the input is valid (available direction - path is available, not locked), move the player in the input direction; 
+    else, returns “unavailable direction” string and prompts user to enter a different direction.
+    """
     global location
     if direction != "north" and direction != "east" and direction != "south" and direction != "west":
         return "Failed: not a valid direction."
@@ -126,7 +127,7 @@ If the input is valid (available direction - path is available, not locked), mov
 
 def look():
     """ Provide a description of the player's current location (based on the location variable from go(direction)), including exits, interactable objects
-"""
+    """
     if location == "vestibule":
         return status_module.vestibule_flavor
     if location == "atrium":
@@ -148,8 +149,8 @@ def look():
     
 def examine(subject):
     """ Player input a string of a subject to examine. 
-If the input is valid (subject is available in location), let player interact with each object (open, close, display item available, etc).
-"""
+    If the input is valid (subject is available in location), let player interact with each object (open, close, display item available, etc).
+    """
     if location == "atrium" and subject in status_module.atrium_objects:
         pass
     elif location == "vestibule" and subject in status_module.vestibule_objects:
@@ -172,10 +173,10 @@ If the input is valid (subject is available in location), let player interact wi
 
 def use(item, subject):
     """ Player input a string of the name of item want to use and a string of the name of the targetted subject.
-If the input is valid (item available in inventory and the target is an interactable object at location), modify game state based on item effect 
-(eg. unlock door → new available direction for move).
-Remove item from inventory after use and show the available items in the inventory.
-"""
+    If the input is valid (item available in inventory and the target is an interactable object at location), modify game state based on item effect 
+    (eg. unlock door → new available direction for move).
+    Remove item from inventory after use and show the available items in the inventory.
+    """
     # Check if item is available in inventory
     if item in status_module.inventory:
         # Check if the target in an interactable object at location
