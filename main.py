@@ -5,12 +5,8 @@ def main():
     command_module.menu()
     while True:
         command_module.get_input()
-        if command_module.win == True:
-            replay = command_module.winner()
-            if replay == True:
-                continue
-            else:
-                break 
+        if status_module.win == True:
+            command_module.end_menu()
 
 
 
