@@ -7,8 +7,16 @@ def initialize():
     item_pairs = {"old key": "old door", "keycard": "keycard door", "rusty key": "rusty door", "shiny key": "shiny door", "gold key": "gold door"}
     global inventory
     inventory = []
+    global turn
+    turn = 0
     global win 
     win = False
+
+def end_menu():
+    ''' shows end data and stats, variable counter for turns taken added every time a command is successful'''
+
+def start_menu():
+    '''call instructions function and ask whether to begin a new game or reset'''
 
 vestibule_flavor = "text"
 vestibule_objects = []
@@ -36,7 +44,6 @@ dean_office_objects = []
 
 balcony_flavor = ""
 balcony_objects = []
-
 
 command_list = ["go", "look", "examine", "use"]
 
