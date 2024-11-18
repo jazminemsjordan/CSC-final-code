@@ -230,9 +230,6 @@ def use(item, subject):
     else:
         return "Failed: you don't have that with you."
     
-def end_menu():
-    ''' shows end data and stats, variable counter for turns taken added every time a command is successful'''
-
 def save_game():
     ''' writes project file with status module: inventory, location, etc.)'''
 
