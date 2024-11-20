@@ -24,13 +24,13 @@ def go(direction):
 def look():
     """ Provide a description of the player's current location (based on the location variable from go(direction)), including exits, interactable objects
     """
-
+    pass
     
 def examine(subject):
     """ Player input a string of a subject to examine. 
     If the input is valid (subject is available in location), let player interact with each object (open, close, display item available, etc).
     """
-
+    pass
 
 def use(item, subject):
     """ Player input a string of the name of item want to use and a string of the name of the targetted subject.
@@ -38,12 +38,15 @@ def use(item, subject):
     (eg. unlock door → new available direction for move).
     Remove item from inventory after use and show the available items in the inventory.
     """
+    pass
     # Check if item is available in inventory
         # Check if the target in an interactable object at location
 
     
 def save_game():
     """ Writes project file with status module: inventory, location, etc.)"""
+    pass
 
 def load_game():
     """ Reads file data and loads variables from past game """
+    pass
