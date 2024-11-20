@@ -13,10 +13,10 @@ def initialize():
     win = False
 
 def end_menu():
-    ''' shows end data and stats, variable counter for turns taken added every time a command is successful'''
+    """ Shows end data and stats, variable counter for turns taken added every time a command is successful."""
 
 def start_menu():
-    '''call instructions function and ask whether to begin a new game or reset'''
+    """ Call instructions function and ask whether to begin a new game or reset."""
 
 vestibule_flavor = "text"
 vestibule_objects = []
