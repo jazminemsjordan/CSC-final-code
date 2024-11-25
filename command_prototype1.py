@@ -8,6 +8,7 @@ def check_commands(command):
 
 
 def get_input():
+    '''gets player input, sends to check_commands to call relevant functions'''
     pass
         
 
