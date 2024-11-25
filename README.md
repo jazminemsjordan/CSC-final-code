@@ -16,3 +16,7 @@ FILE LIST
 - status_module.py - initializes the game state, setting up the starting location, inventory, locked areas, and key-item pairs; sets up flavor text, interactable and non-interactable objects; establishes list of valid commands (direction, item use, item pick-up, etc.); transits between start and end menus
 
 USER GUIDE
+- Download all files to the same location on your system.
+- Copy the file path of the main.py file by right clicking the file and selecting "copy as path".
+- Open your device's terminal. (On Windows, this can be achieved by clicking the start menu, typing "cmd", and pressing enter).
+- Run main.py by entering the command "python", followed by the copied filepath of main.py, then press enter.
