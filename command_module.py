@@ -167,8 +167,7 @@ def examine(subject):
         pass
     elif location == "library" and subject in status_module.library_objects:
         if subject == "mahogany bookcase":
-            status_module.inventory.append("small key")
-            return status_module.mahogany_bookcase_flavor
+            return status_module.mahogany_bookcase_puzzle()
         if subject == "librarian's desk":
             return status_module.librarian's_desk_flavor
         if subject == "study table":
