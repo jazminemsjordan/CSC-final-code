@@ -18,14 +18,10 @@ def end_menu():
 def start_menu():
     """ Call instructions function and ask whether to begin a new game or reset."""
 
-vestibule_flavor = "You are in the vestibule. The entrance is framed by sleek glass walls and natural stone flooring, with clean lines that hint at the building's contemporary design. 
-Objects of interest: touchscreen directory, coat hooks, bench with a charging station, keycard door.
-To the North is the Atrium."
+vestibule_flavor = "You are in the vestibule. The entrance is framed by sleek glass walls and natural stone flooring, with clean lines that hint at the building's contemporary design.\nObjects of interest: touchscreen directory, coat hooks, bench with a charging station, keycard door.\nTo the North is the Atrium."
 vestibule_objects = ["keycard door", "touchscreen directory", "coat hooks", "bench with a charging station"]
 
-atrium_flavor = "You are in the atrium. The expansive central space features soaring ceilings, an open staircase, and wide windows that flood the room with light. Collaborative seating areas dot the floor, inviting group discussions. 
-Objects of interest: indoor plants, central staircase, rusty door, old door.  
-To the North is Classroom 1. To the East is Classroom 2. To the West is the Stairwell. To the South is the Vestibule."
+atrium_flavor = "You are in the atrium. The expansive central space features soaring ceilings, an open staircase, and wide windows that flood the room with light. Collaborative seating areas dot the floor, inviting group discussions.\nObjects of interest: indoor plants, central staircase, rusty door, old door.\nTo the North is Classroom 1. To the East is Classroom 2. To the West is the Stairwell. To the South is the Vestibule."
 atrium_objects = ["old door", "rusty door", "indoor plants", "central staircase"]
 
 classroom_1_flavor = "You are in Classroom 1. A mix of modular tables and chairs fills the room, designed for interactive learning. A smartboard stretches across one wall, flanked by writable whiteboard surfaces.  
