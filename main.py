@@ -1,5 +1,6 @@
 # beginning the game
 import command_module
+import status_module
 
 def main():
     command_module.menu()
