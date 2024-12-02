@@ -169,7 +169,7 @@ def examine(subject):
         if subject == "mahogany bookcase":
             return status_module.mahogany_bookcase_puzzle()
         if subject == "librarian's desk":
-            return status_module.librarian's_desk_flavor
+            return status_module.librarian_desk_flavor
         if subject == "study table":
             return status_module.study_table_flavor
     elif location == "balcony" and subject in status_module.balcony_objects:
