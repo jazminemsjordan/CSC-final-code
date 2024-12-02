@@ -36,8 +36,8 @@ classroom_3_objects = []
 supply_closet_flavor = ""
 supply_closet_objects = []
 
-library_flavor = ""
-library_objects = []
+library_flavor = "You are in the library. Floor to ceiling bookshelves line the walls, with a few cozy looking chairs and couches in the center. Objects of interest: librarian's desk, study table, mahogany bookcase. To the north is Classroom 3. To the east is the Dean's Office. To the South is the balcony. To the West is the stairwell down to the atrium."
+library_objects = ["librarian's desk", "study table", "mahogany bookcase"]
 
 dean_office_flavor = ""
 dean_office_objects = []
