@@ -13,6 +13,10 @@ def check_commands(command):
         if command == "examine":
             object = input("What would you like to examine?")
             return examine(object)
+        if command == "use":
+            item = input("What would you like to use?")
+            subject = input("On what will you use it on?")
+            return use(item, subject)
 
     else:
         return "Failed: not a valid command."
@@ -162,7 +166,13 @@ def examine(subject):
     elif location == "classroom_2" and subject in status_module.classroom_2_objects:
         pass
     elif location == "library" and subject in status_module.library_objects:
-        pass
+        if subject == "mahogany bookcase":
+            status_module.inventory.append("small key")
+            return status_module.mahogany_bookcase_flavor
+        if subject == "librarian's desk":
+            return status_module.librarian's_desk_flavor
+        if subject == "study table":
+            return status_module.study_table_flavor
     elif location == "balcony" and subject in status_module.balcony_objects:
         pass
     elif location == "classroom_3" and subject in status_module.classroom_3_objects:
