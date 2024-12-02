@@ -4,7 +4,7 @@ def initialize():
     global locked
     locked = {"supply_closet": True, "classroom_2": True, "classroom_3": True, "dean_office": True}
     global item_pairs
-    item_pairs = {"old key": "old door", "keycard": "keycard door", "rusty key": "rusty door", "shiny key": "shiny door", "gold key": "gold door"}
+    item_pairs = {"old key": "old door", "keycard": "keycard door", "rusty key": "rusty door", "shiny key": "shiny door", "gold key": "gold door", "small key": "small drawer"}
     global inventory
     inventory = []
     global turn
