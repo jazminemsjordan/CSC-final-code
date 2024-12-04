@@ -24,7 +24,7 @@ vestibule_objects = ["keycard door", "touchscreen directory", "coat hooks", "ben
 atrium_flavor = "You are in the atrium. The expansive central space features soaring ceilings, an open staircase, and wide windows that flood the room with light. Collaborative seating areas dot the floor, inviting group discussions.\nObjects of interest: indoor plants, central staircase, rusty door, old door.\nTo the North is Classroom 1. To the East is Classroom 2. To the West is the Stairwell. To the South is the Vestibule."
 atrium_objects = ["old door", "rusty door", "indoor plants", "central staircase"]
 
-classroom_1_flavor = "You are in Classroom 1. A mix of modular tables and chairs fills the room, designed for interactive learning. A smartboard stretches across one wall, flanked by writable whiteboard surfaces.\nObjects of interest: smartboard, lab stools, supply drawers.\nTo the South is the Atrium."
+classroom_1_flavor = "You are in Classroom 1. A mix of modular tables and chairs fills the room, designed for interactive learning. A smartboard stretches across one wall, flanked by writable whiteboard surfaces.\nObjects of interest: smartboard, lab stools, supply drawers.\nTo the South is the Atrium. To the East is the supply closet."
 classroom_1_objects = ["smartboard", "lab stools", "supply drawers"]
 
 classroom_2_flavor = "You are in Classroom 2. Rows of lab benches are equipped with sinks and microscopes, with overhead fume hoods lining the perimeter. The room is primed for hands-on experimentation.\nObjects of interest: lab benches, safety cabinet, wall-mounted monitor.\nTo the West is the Atrium."
