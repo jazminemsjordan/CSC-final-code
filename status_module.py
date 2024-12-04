@@ -33,7 +33,7 @@ indoor_plants_flavor = ""
 central_staircase_flavor = ""
 
 classroom_1_flavor = "You are in Classroom 1. A mix of modular tables and chairs fills the room, designed for interactive learning. A smartboard stretches across one wall, flanked by writable whiteboard surfaces.\nObjects of interest: smartboard, lab stools, supply drawers.\nTo the South is the Atrium. To the East is the supply closet."
-classroom_1_objects = ["smartboard", "lab stools", "supply drawers"]
+classroom_1_objects = ["smartboard", "lab stools", "supply drawer"]
 smartboard_flavor = ""
 lab_stools_flavor = ""
 supply_drawers_flavor = ""
@@ -53,7 +53,7 @@ robotics_kits_flavor = ""
 supply_closet_flavor = "You are in the Supply Closet. Compact and efficient, the room houses rows of labeled bins holding everything from lab coats to specialized tools.\nObjects of interest: equipment shelves, PPE cabinet.\nTo the east is Classroom 3."
 supply_closet_objects = ["equipment shelves", "PPE cabinet"]
 equipment_shelves_flavor = ""
-PPE_cabinet_flavor = ""
+ppe_cabinet_flavor = ""
 
 library_flavor = "You are in the library. Floor to ceiling bookshelves line the walls, with a few cozy looking chairs and couches in the center.\nObjects of interest: librarian desk, study table, mahogany bookcase.\nTo the north is Classroom 3. To the east is the Dean's Office. To the South is the balcony. To the West is the stairwell down to the atrium."
 library_objects = ["librarian desk", "study table", "mahogany bookcase", "shiny door", "gold door"]
