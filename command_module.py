@@ -189,56 +189,30 @@ def use(item, subject):
     # Check if item is available in inventory
     if item in status_module.inventory:
         # Check if the target in an interactable object at location
-        if location == "atrium" and subject in status_module.atrium_objects:
-            if status_module.item_pairs[item] == subject:
-                pass
-            else: 
-                return "Failed: those things don't go together."
-        elif location == "vestibule" and subject in status_module.vestibule_objects:
-            if status_module.item_pairs[item] == subject:
-                pass
-            else: 
-                return "Failed: those things don't go together."
-        elif location == "classroom_1" and subject in status_module.classroom_1_objects:
-            if status_module.item_pairs[item] == subject:
-                pass
-            else: 
-                return "Failed: those things don't go together."    
-        elif location == "supply_closet" and subject in status_module.supply_closet_objects:
-           if status_module.item_pairs[item] == subject:
-                pass
-           else: 
-                return "Failed: those things don't go together." 
-        elif location == "classroom_2" and subject in status_module.classroom_2_objects:
-           if status_module.item_pairs[item] == subject:
-                pass
-           else: 
-                return "Failed: those things don't go together." 
-        elif location == "library" and subject in status_module.library_objects:
-           if status_module.item_pairs[item] == subject:
-                pass
-           else: 
-                return "Failed: those things don't go together." 
-        elif location == "balcony" and subject in status_module.balcony_objects:
-           if status_module.item_pairs[item] == subject:
-                pass
-           else: 
-                return "Failed: those things don't go together." 
-        elif location == "classroom_3" and subject in status_module.classroom_3_objects:
-           if status_module.item_pairs[item] == subject:
-                pass
-           else: 
-                return "Failed: those things don't go together." 
-        elif location == "dean_office" and subject in status_module.dean_office_objects:
-           if status_module.item_pairs[item] == subject:
-                pass
-           else: 
-                return "Failed: those things don't go together." 
-        else:
-            return "Failed: you don't see that in this room."
-    else:
-        return "Failed: you don't have that with you."
-    
+        if location == "atrium" and item == "old key" and subject == "old door":
+            status_module.locked["old door"] == False
+            status_module.inventory.remove("old key") 
+            return "You unlocked the door to classroom 2!"
+        elif location == "classroom_1" and item == "rusty key" and subject == "rusty door":
+            status_module.locked["rusty door"] == False
+            status_module.inventory.remove("rusty key")
+            return "You unlocked the door to the supply closet!"
+        elif location == "library" and item == "drawer key" and subject == "librarian desk":
+            status_module.locked["librarian desk"] == False
+            status_module.inventory.remove("drawer key")
+            return "You unlocked the door to the librarian's desk!"
+        elif location == "library" and item == "gold key" and subject == "gold door":
+            status_module.locked["gold door"] == False
+            status_module.inventory.remove("gold key")
+            return "You unlocked the door to the dean's office!"
+        elif location == "library" and item == "shiny key" and subject == "shiny door":
+            status_module.locked["shiny door"] == False
+            status_module.inventory.remove("shiny key")
+            return "You unlocked the door to the dean's office!"
+        elif location == "vestibule" and item == "keycard" and subject == "keycard door":
+            status_module.locked["keycard door"] == False
+            status_module.inventory.remove("keycard")
+            return "You unlocked the exit door! Now you can out of here!"
 def save_game():
     ''' writes project file with status module: inventory, location, etc.)'''
 
