@@ -18,11 +18,17 @@ def end_menu():
 def start_menu():
     """ Call instructions function and ask whether to begin a new game or reset."""
 
-vestibule_flavor = "You are in the vestibule. The entrance is framed by sleek glass walls and natural stone flooring, with clean lines that hint at the building's contemporary design.\nObjects of interest: touchscreen directory, coat hooks, bench with a charging station, keycard door.\nTo the North is the Atrium."
-vestibule_objects = ["keycard door", "touchscreen directory", "coat hooks", "bench with a charging station"]
+vestibule_flavor = "You are in the vestibule. The entrance is framed by sleek glass walls and natural stone flooring, with clean lines that hint at the building's contemporary design.\nObjects of interest: touchscreen directory, coat hooks, charging station, keycard door.\nTo the North is the Atrium."
+vestibule_objects = ["keycard door", "touchscreen directory", "coat hooks", "charging station"]
+keycard_door_flavor = "The exit to the building is locked."
+touchscreen_directory flavor = ""
+coat_hooks_flavor = ""
+charging_station_flavor = ""
 
 atrium_flavor = "You are in the atrium. The expansive central space features soaring ceilings, an open staircase, and wide windows that flood the room with light. Collaborative seating areas dot the floor, inviting group discussions.\nObjects of interest: indoor plants, central staircase, rusty door, old door.\nTo the North is Classroom 1. To the East is Classroom 2. To the West is the Stairwell. To the South is the Vestibule."
 atrium_objects = ["old door", "rusty door", "indoor plants", "central staircase"]
+old_door_flavor = "The old door is locked. The faded sign reads "Classroom 1."
+rusty_door_flavor = "The rusted door to the supply closet is locked."
 
 classroom_1_flavor = "You are in Classroom 1. A mix of modular tables and chairs fills the room, designed for interactive learning. A smartboard stretches across one wall, flanked by writable whiteboard surfaces.\nObjects of interest: smartboard, lab stools, supply drawers.\nTo the South is the Atrium. To the East is the supply closet."
 classroom_1_objects = ["smartboard", "lab stools", "supply drawers"]
