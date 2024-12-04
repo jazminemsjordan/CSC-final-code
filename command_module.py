@@ -45,7 +45,8 @@ def go(direction):
             if status_module.locked["exit"] == True:
                 return "Failed: the exit is locked."
             else: 
-                return "win"
+                status_module.win == True
+                return "You made it out!"
         else:
             return "Failed: you can't go that way."
     
