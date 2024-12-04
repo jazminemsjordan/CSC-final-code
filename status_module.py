@@ -27,7 +27,7 @@ charging_station_flavor = ""
 
 atrium_flavor = "You are in the atrium. The expansive central space features soaring ceilings, an open staircase, and wide windows that flood the room with light. Collaborative seating areas dot the floor, inviting group discussions.\nObjects of interest: indoor plants, central staircase, rusty door, old door.\nTo the North is Classroom 1. To the East is Classroom 2. To the West is the Stairwell. To the South is the Vestibule."
 atrium_objects = ["old door", "rusty door", "indoor plants", "central staircase"]
-old_door_flavor = "The old door is locked. The faded sign reads "Classroom 1."
+old_door_flavor = "The old door is locked. The faded sign reads Classroom 1."
 rusty_door_flavor = "The rusted door to the supply closet is locked."
 
 classroom_1_flavor = "You are in Classroom 1. A mix of modular tables and chairs fills the room, designed for interactive learning. A smartboard stretches across one wall, flanked by writable whiteboard surfaces.\nObjects of interest: smartboard, lab stools, supply drawers.\nTo the South is the Atrium. To the East is the supply closet."
@@ -44,14 +44,8 @@ supply_closet_objects = ["equipment shelves", "PPE cabinet"]
 
 library_flavor = "You are in the library. Floor to ceiling bookshelves line the walls, with a few cozy looking chairs and couches in the center.\nObjects of interest: librarian desk, study table, mahogany bookcase.\nTo the north is Classroom 3. To the east is the Dean's Office. To the South is the balcony. To the West is the stairwell down to the atrium."
 library_objects = ["librarian desk", "study table", "mahogany bookcase", "shiny door", "gold door"]
-def mahogany_bookcase_puzzle():
-    print("The bookcase is tall and intimidating, with a variety of colorful books. Which would you like to check?")
-    book = input("Which color book do you select?")
-    if book == "violet":
-        inventory.append("drawer key")
-        return("You open the violet book to find it hollowed out. There's a key inside! You got: drawer key.")
-    else:
-        return("You open the " + book + " book, but see nothing of note.")
+mahogany_bookcase_flavor = "There's a bright book that seems out of place. You open the violet book to find it hollowed out. There's a key inside! You got: drawer key.")
+
 librarian_desk_flavor = "The desk is well-used, covered in books and scribbles on the wood. You notice a small lock on one of the drawers."
 study_table_flavor = "The study table is covered in a thin layer of dust. Apparently nobody has studied here for a while. You see nothing important."
 
