@@ -34,7 +34,7 @@ def go(direction):
     else, returns “unavailable direction” string and prompts user to enter a different direction.
     """
     if direction != "north" and direction != "east" and direction != "south" and direction != "west":
-        return "Failed: not a valid direction."
+        return direction
     if status_module.location == "vestibule":
         if direction == "north":
             status_module.location = "atrium"
