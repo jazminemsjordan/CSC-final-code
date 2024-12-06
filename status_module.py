@@ -98,5 +98,5 @@ balcony_objects = ["glass railing", "potted plants"]
 glass_railing_flavor = ""
 potted_plants_flavor = ""
 
-command_list = ["go", "look", "examine", "use"]
+command_list = ["go", "look", "examine", "use", "inventory"]
 
