@@ -17,6 +17,8 @@ def check_commands(command):
             item = input("What would you like to use?")
             subject = input("On what will you use it on?")
             return use(item, subject)
+        if command == "inventory":
+            return status_module.inventory 
 
     else:
         return "Failed: not a valid command."
