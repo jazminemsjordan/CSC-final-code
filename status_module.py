@@ -14,9 +14,19 @@ def initialize():
 
 def end_menu():
     """ Shows end data and stats, variable counter for turns taken added every time a command is successful."""
+    print("Congratulations! You win!")
 
 def start_menu():
     """ Call instructions function and ask whether to begin a new game or reset."""
+    print("Christmas at Ford Hall")
+    print("-----------------------")
+    print("Oh no! The doors locked for Christmas break while you were still inside the hall. Can you escape and make it home for the holidays?")
+    initialize()
+    start = input("Start game: Y/N?")
+    if start == "Y":
+        return
+    else:
+        exit()
 
 vestibule_flavor = "You are in the vestibule. The entrance is framed by sleek glass walls and natural stone flooring, with clean lines that hint at the building's contemporary design.\nObjects of interest: touchscreen directory, coat hooks, charging station, keycard door.\nTo the North is the Atrium."
 vestibule_objects = ["keycard door", "touchscreen directory", "coat hooks", "charging station"]
