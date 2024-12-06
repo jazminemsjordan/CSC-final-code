@@ -11,6 +11,10 @@ def initialize():
     turn = 0
     global win 
     win = False
+    
+def instructions():
+    print("To play: first enter a general command (go, examine, or use). Then, input specifics as prompted (which direction, what to use, etc.")
+    
 
 def end_menu():
     """ Shows end data and stats, variable counter for turns taken added every time a command is successful."""
@@ -24,7 +28,7 @@ def start_menu():
     initialize()
     start = input("Start game: Y/N?")
     if start == "Y":
-        return
+        instructions()
     else:
         exit()
 
