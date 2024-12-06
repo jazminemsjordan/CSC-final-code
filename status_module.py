@@ -91,7 +91,7 @@ dean_office_flavor = "You are in the Dean's Office. The room balances modernity 
 dean_office_objects = ["ergonomic desk", "bookshelf with scientific journals", "Smith College crest plaque"]
 ergonomic_desk_flavor = ""
 bookshelf_flavor = ""
-crest_plague_flavor = ""
+crest_plaque_flavor = ""
 
 balcony_flavor = "You are on the Balcony. Glass railings provide an uninterrupted view of the campus greenery below, with a few seating options tucked in for a quiet moment between classes.\nObjects of interest: glass railing, potted plants.\nTo the north is the Library."
 balcony_objects = ["glass railing", "potted plants"]

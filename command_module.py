@@ -155,28 +155,69 @@ def examine(subject):
     If the input is valid (subject is available in location), let player interact with each object (open, close, display item available, etc).
     """
     if status_module.location == "atrium" and subject in status_module.atrium_objects:
-        pass
+        if subject == "old door":
+            return status_module.old_door_flavor
+        if subject == "indoor plants":
+            return status_module.indoor_plants_flavor
+        if subject == "central staircase":
+            return status_module.central_staircase_flavor
     elif status_module.location == "vestibule" and subject in status_module.vestibule_objects:
-        pass
+        if subject == "keycard door":
+            return status_module.keycard_door_flavor
+        if subject == "touchscreen directory":
+            return status_module.touchscreen_directory_flavor
+        if subject == "coat hooks":
+            return status_module.coat_hooks_flavor
     elif status_module.location == "classroom_1" and subject in status_module.classroom_1_objects: 
-        pass  
+        if subject == "smartboard":
+            return status_module.smartboard_flavor
+        if subject == "lab stools":
+            return status_module.lab_stools_flavor
+        if subject == "supply drawers":
+            return status_module.supply_drawers_flavor  
     elif status_module.location == "supply_closet" and subject in status_module.supply_closet_objects:
-        pass
+        if subject == "equipment shelves":
+            return status_module.equipment_shelves_flavor
+        if subject == "PPE cabinet":
+            return status_module.ppe_cabinet_flavor
     elif status_module.location == "classroom_2" and subject in status_module.classroom_2_objects:
-        pass
+        if subject == "lab benches":
+            return status_module.lab_benches_flavor
+        if subject == "safety cabinet":
+            return status_module.safety_cabinet_flavor
+        if subject == "wall-mounted monitor":
+            return status_module.wall_mounted_monitor_flavor
     elif status_module.location == "library" and subject in status_module.library_objects:
         if subject == "mahogany bookcase":
+            status_module.inventory.append("drawer key")
             return status_module.mahogany_bookcase_flavor
         if subject == "librarian's desk":
             return status_module.librarian_desk_flavor
         if subject == "study table":
             return status_module.study_table_flavor
+        if subject == "gold door":
+            return status_module.gold_door_flavor
+        if subject == "shiny door":
+            return status_module.shiny_door_flavor
     elif status_module.location == "balcony" and subject in status_module.balcony_objects:
-        pass
+        if subject == "glass railing":
+            return status_module.glass_railing_flavor
+        if subject == "potted plants":
+            return status_module.potted_plants_flavor
     elif status_module.location == "classroom_3" and subject in status_module.classroom_3_objects:
-        pass
+        if subject == "3D printers":
+            return status_module.printer_flavor
+        if subject == "power outlets":
+            return status_module.power_outlets_flavor
+        if subject == "robotic kits":
+            return status_module.robotics_kits_flavor
     elif status_module.location == "dean_office" and subject in status_module.dean_office_objects:
-        pass
+        if subject == "ergonomic desk":
+            return status_module.ergonomic_desk_flavor
+        if subject == "bookshelf with scientific journals":
+            return status_module.bookshelf_flavor
+        if subject == "Smith College crest plaque":
+            return status_module.crest_plaque_flavor
     else:
         return "You can't find that object right now."
 
