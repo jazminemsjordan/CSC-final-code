@@ -176,14 +176,17 @@ def examine(subject):
         if subject == "lab stools":
             return status_module.lab_stools_flavor
         if subject == "supply drawers":
+            status_module.inventory.append("rusty key")
             return status_module.supply_drawers_flavor  
     elif status_module.location == "supply_closet" and subject in status_module.supply_closet_objects:
         if subject == "equipment shelves":
+            status_module.inventory.append("old key")
             return status_module.equipment_shelves_flavor
         if subject == "PPE cabinet":
             return status_module.ppe_cabinet_flavor
     elif status_module.location == "classroom_2" and subject in status_module.classroom_2_objects:
         if subject == "lab benches":
+            status_module.inventory.append("drawer key")
             return status_module.lab_benches_flavor
         if subject == "safety cabinet":
             return status_module.safety_cabinet_flavor
@@ -191,7 +194,6 @@ def examine(subject):
             return status_module.wall_mounted_monitor_flavor
     elif status_module.location == "library" and subject in status_module.library_objects:
         if subject == "mahogany bookcase":
-            status_module.inventory.append("drawer key")
             return status_module.mahogany_bookcase_flavor
         if subject == "librarian's desk":
             return status_module.librarian_desk_flavor
@@ -207,7 +209,8 @@ def examine(subject):
         if subject == "potted plants":
             return status_module.potted_plants_flavor
     elif status_module.location == "classroom_3" and subject in status_module.classroom_3_objects:
-        if subject == "3D printers":
+        if subject == "3D printers":            
+            status_module.inventory.append("gold key")
             return status_module.printer_flavor
         if subject == "power outlets":
             return status_module.power_outlets_flavor
@@ -219,6 +222,7 @@ def examine(subject):
         if subject == "bookshelf with scientific journals":
             return status_module.bookshelf_flavor
         if subject == "Smith College crest plaque":
+            status_module.inventory.append("keycard")
             return status_module.crest_plaque_flavor
     else:
         return "You can't find that object right now."
@@ -236,23 +240,24 @@ def use(item, subject):
         if status_module.location == "atrium" and item == "old key" and subject == "old door":
             status_module.locked["old door"] == False
             status_module.inventory.remove("old key") 
-            return "You unlocked the door to classroom 2!"
+            return "You unlocked the door! You can now enter Classroom 2."
         elif status_module.location == "classroom_1" and item == "rusty key" and subject == "rusty door":
             status_module.locked["rusty door"] == False
             status_module.inventory.remove("rusty key")
-            return "You unlocked the door to the supply closet!"
+            return "You unlocked the door! You can now enter the supply closet."
         elif status_module.location == "library" and item == "drawer key" and subject == "librarian's desk":
             status_module.locked["librarian's desk"] == False
             status_module.inventory.remove("drawer key")
-            return "You unlocked the door to the librarian's desk!"
+            status_module.inventory.append("shiny key")
+            return "You unlocked the drawer of the librarian's desk! You found: shiny key."
         elif status_module.location == "library" and item == "gold key" and subject == "gold door":
             status_module.locked["gold door"] == False
             status_module.inventory.remove("gold key")
-            return "You unlocked the door to the dean's office!"
+            return "You unlocked the door! You can now enter the dean's office."
         elif status_module.location == "library" and item == "shiny key" and subject == "shiny door":
             status_module.locked["shiny door"] == False
             status_module.inventory.remove("shiny key")
-            return "You unlocked the door to the dean's office!"
+            return "You unlocked the door! You can now enter Classroom 3."
         elif status_module.location == "vestibule" and item == "keycard" and subject == "keycard door":
             status_module.locked["keycard door"] == False
             status_module.inventory.remove("keycard")
