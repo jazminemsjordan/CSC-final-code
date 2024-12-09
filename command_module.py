@@ -196,7 +196,9 @@ def examine(subject):
             return status_module.lab_stools_flavor
         if subject == "supply drawers":
             status_module.inventory.append("rusty key")
-            return status_module.supply_drawers_flavor  
+            return status_module.supply_drawers_flavor
+        if subject == "rusty door":
+            return status_module.rusty_door_flavor  
     elif status_module.location == "supply_closet":
         if subject == "equipment shelves":
             status_module.inventory.append("old key")
