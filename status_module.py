@@ -37,46 +37,50 @@ vestibule_objects = ["keycard door", "touchscreen directory", "coat hooks", "cha
 
 keycard_door_flavor = "The exit to the building is locked."
 
-touchscreen_directory_flavor = ""
-coat_hooks_flavor = ""
-charging_station_flavor = ""
+touchscreen_directory_flavor = "The touchscreen directory glows faintly, displaying a map of the building. A sticky note tucked into the frame reads, 'Merry Christmas?!'"
+coat_hooks_flavor = "A neat row of coat hooks lines the wall. Most of them are empty, but one hook holds a scarf with 'Lost and Found' embroidered on it."
+charging_station_flavor = "The blinking red light appears to be a malfunction, and nothing else catches your attention."
 
 atrium_flavor = "You are in the atrium. The expansive central space features soaring ceilings, an open staircase, and wide windows that flood the room with light. Collaborative seating areas dot the floor, inviting group discussions.\nObjects of interest: indoor plants, central staircase, rusty door, old door.\nTo the North is Classroom 1. To the East is Classroom 2. To the West is the Stairwell. To the South is the Vestibule."
 atrium_objects = ["old door", "indoor plants", "central staircase"]
 
 old_door_flavor = "The old door is locked. The faded sign reads Classroom 2."
 
-indoor_plants_flavor = ""
-central_staircase_flavor = ""
+indoor_plants_flavor = "A collection of potted indoor plants adds a touch of green. Beneath one pot is a faint scratch, but there's nothing of importance."
+central_staircase_flavor = "The central staircase spirals gracefully to the upper levels, its clean lines uninterrupted by anything unusual."
 
 classroom_1_flavor = "You are in Classroom 1. A mix of modular tables and chairs fills the room, designed for interactive learning. A smartboard stretches across one wall, flanked by writable whiteboard surfaces.\nObjects of interest: smartboard, lab stools, supply drawers.\nTo the South is the Atrium. To the East is the supply closet."
 classroom_1_objects = ["smartboard", "lab stools", "supply drawer", "rusty door"]
 
 rusty_door_flavor = "The rusted door to the supply closet is locked."
 
-smartboard_flavor = ""
-lab_stools_flavor = ""
-supply_drawers_flavor = ""
+smartboard_flavor = "The smartboard hums softly with a faint glow, displaying 'No Input Detected.' A USB port is visible, but you find nothing significant."
+lab_stools_flavor = "The lab stools are neatly arranged. Underneath one, theres an old piece of gum—gross, but nothing useful"
+supply_drawers_flavor = "A row of drawers lines the room. They are all empty, except for an assortment of old lab tools and a sign of metallic - You found: Rusty key."
 
 classroom_2_flavor = "You are in Classroom 2. Rows of lab benches are equipped with sinks and microscopes, with overhead fume hoods lining the perimeter. The room is primed for hands-on experimentation.\nObjects of interest: lab benches, safety cabinet, wall-mounted monitor.\nTo the West is the Atrium."
 classroom_2_objects = ["lab benches", "safety cabinet", "wall-mounted monitor"]
-lab_benches_flavor = ""
-safety_cabinet_flavor = ""
-wall_mounted_monitor_flavor = ""
+
+lab_benches_flavor = "The lab benches are cluttered with abandoned experiments—beakers, pipettes, and half-written notes."
+safety_cabinet_flavor = "The safety cabinet is locked and contains standard safety gear—nothing useful."
+wall_mounted_monitor_flavor = "The wall-mounted monitor is dark, with a fingerprint smudge on the screen. It appears non-functional."
 
 classroom_3_flavor = "You are in Classroom 3. The room features workstations with power outlets, 3D printers, and toolkits neatly arranged along the walls.\nObjects of interest: 3D printer, soldering station, robotics kits.\nTo the South is the Library."
 classroom_3_objects = ["3D printer", "power outlets", "robotics kits"]
-printer_flavor = ""
-power_outlets_flavor = ""
-robotics_kits_flavor = ""
+
+printer_flavor = "The 3D printer hums quietly. On the platform sits a newly printed object—a gold key is put next to the unfinished project."
+power_outlets_flavor = "Rows of power outlets blink green. One outlet blinks red but reveals nothing unusual."
+robotics_kits_flavor = "The robotics kits are neatly arranged in plastic bins. None of them hold anything important."
 
 supply_closet_flavor = "You are in the Supply Closet. Compact and efficient, the room houses rows of labeled bins holding everything from lab coats to specialized tools.\nObjects of interest: equipment shelves, PPE cabinet.\nTo the east is Classroom 3."
 supply_closet_objects = ["equipment shelves", "PPE cabinet"]
-equipment_shelves_flavor = ""
-ppe_cabinet_flavor = ""
+
+equipment_shelves_flavor = "The equipment shelves are packed with supplies—spools of wire, boxes of screws, and a small toolkit that seems unusually dusty."
+ppe_cabinet_flavor = "The PPE cabinet gleams under the light, filled with goggles and gloves but no hidden items."
 
 library_flavor = "You are in the library. Floor to ceiling bookshelves line the walls, with a few cozy looking chairs and couches in the center.\nObjects of interest: librarian desk, study table, mahogany bookcase.\nTo the north is Classroom 3. To the east is the Dean's Office. To the South is the balcony. To the West is the stairwell down to the atrium."
 library_objects = ["librarian desk", "study table", "mahogany bookcase", "shiny door", "gold door"]
+
 mahogany_bookcase_flavor = "There's a bright book that seems out of place. You open the violet book to find it hollowed out."
 
 librarian_desk_flavor = "The desk is well-used, covered in books and scribbles on the wood. You notice a small lock on one of the drawers."
@@ -89,14 +93,16 @@ gold_door_flavor = "The ornate gold door to the Dean's Office is locked."
 
 dean_office_flavor = "You are in the Dean's Office. The room balances modernity and warmth, with contemporary furniture and framed photographs of recent projects and alumni achievements.\nObjects of interest: ergonomic desk, bookshelf with scientific journals, Smith College crest plaque.\nTo the West is the Library."
 dean_office_objects = ["ergonomic desk", "bookshelf with scientific journals", "Smith College crest plaque"]
-ergonomic_desk_flavor = ""
-bookshelf_flavor = ""
-crest_plaque_flavor = ""
+
+ergonomic_desk_flavor = "The ergonomic desk is organized and spotless. Theres nothing hidden here."
+bookshelf_flavor = "The bookshelf contains scientific journals. One journal is wedged at an odd angle but holds no items."
+crest_plaque_flavor = "The Smith College crest plaque hangs above the desk, pristine but ordinary."
 
 balcony_flavor = "You are on the Balcony. Glass railings provide an uninterrupted view of the campus greenery below, with a few seating options tucked in for a quiet moment between classes.\nObjects of interest: glass railing, potted plants.\nTo the north is the Library."
 balcony_objects = ["glass railing", "potted plants"]
-glass_railing_flavor = ""
-potted_plants_flavor = ""
+
+glass_railing_flavor = "The glass railing offers a beautiful view but has no apparent hiding spots for anything significant."
+potted_plants_flavor = "The potted plants are vibrant, but closer inspection reveals no hidden items."
 
 command_list = ["go", "look", "examine", "use", "inventory"]
 
