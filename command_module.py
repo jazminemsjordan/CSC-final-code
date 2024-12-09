@@ -156,10 +156,17 @@ def examine(subject):
     """ Player input a string of a subject to examine. 
     If the input is valid (subject is available in location), let player interact with each object (open, close, display item available, etc).
     """
+    if subject == "door":
+        if status_module.location == "atrium":
+            return status_module.old_door_flavor
+        if status_module.location == "vestibule":
+            return status_module.keycard_door_flavor
+        if status_module.location == "":
+    
     if status_module.location == "atrium":
         if subject == "old door":
             return status_module.old_door_flavor
-        if subject == "indoor plants":
+        if subject == "indoor plants" or subject == "plants":
             return status_module.indoor_plants_flavor
         if subject == "central staircase":
             return status_module.central_staircase_flavor
