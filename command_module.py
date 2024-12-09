@@ -152,6 +152,14 @@ def look():
     if status_module.location == "balcony":
         return status_module.balcony_flavor
     
+def clarify(subject):
+    check = input(f"You see more than one {subject}. Which do you mean?")
+    if subject == "door":
+        if check == "shiny" or "shiny door":
+            return status_module.shiny_door_flavor
+        elif check == "gold" or "gold door":
+            return status_module.gold_door_flavor
+
 def examine(subject):
     """ Player input a string of a subject to examine. 
     If the input is valid (subject is available in location), let player interact with each object (open, close, display item available, etc).
@@ -161,7 +169,11 @@ def examine(subject):
             return status_module.old_door_flavor
         if status_module.location == "vestibule":
             return status_module.keycard_door_flavor
-        if status_module.location == "":
+        if status_module.location == "classroom_1":
+            return status_module.rusty_door_flavor
+        if status_module.location == "library":
+            return clarify(subject)
+        
     
     if status_module.location == "atrium":
         if subject == "old door":
