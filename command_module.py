@@ -259,11 +259,11 @@ def use(item, subject):
     if item in status_module.inventory:
         # Check if the target in an interactable object at location
         if status_module.location == "atrium" and item == "old key" and subject == "old door":
-            status_module.locked["old door"] == False
+            status_module.locked["classroom_2"] == False
             status_module.inventory.remove("old key") 
             return "You unlocked the door! You can now enter Classroom 2."
         elif status_module.location == "classroom_1" and item == "rusty key" and subject == "rusty door":
-            status_module.locked["rusty door"] == False
+            status_module.locked["supply_closet"] == False
             status_module.inventory.remove("rusty key")
             return "You unlocked the door! You can now enter the supply closet."
         elif status_module.location == "library" and item == "drawer key" and subject == "librarian's desk":
@@ -272,15 +272,15 @@ def use(item, subject):
             status_module.inventory.append("shiny key")
             return "You unlocked the drawer of the librarian's desk! You found: shiny key."
         elif status_module.location == "library" and item == "gold key" and subject == "gold door":
-            status_module.locked["gold door"] == False
+            status_module.locked["dean_office"] == False
             status_module.inventory.remove("gold key")
             return "You unlocked the door! You can now enter the dean's office."
         elif status_module.location == "library" and item == "shiny key" and subject == "shiny door":
-            status_module.locked["shiny door"] == False
+            status_module.locked["classroom_3"] == False
             status_module.inventory.remove("shiny key")
             return "You unlocked the door! You can now enter Classroom 3."
         elif status_module.location == "vestibule" and item == "keycard" and subject == "keycard door":
-            status_module.locked["keycard door"] == False
+            status_module.locked["exit"] == False
             status_module.inventory.remove("keycard")
             return "You unlocked the exit door! Now you can out of here!"
 def save_game():
