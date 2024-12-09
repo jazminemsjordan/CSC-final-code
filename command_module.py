@@ -241,8 +241,8 @@ def use(item, subject):
             status_module.locked["rusty door"] == False
             status_module.inventory.remove("rusty key")
             return "You unlocked the door to the supply closet!"
-        elif status_module.location == "library" and item == "drawer key" and subject == "librarian desk":
-            status_module.locked["librarian desk"] == False
+        elif status_module.location == "library" and item == "drawer key" and subject == "librarian's desk":
+            status_module.locked["librarian's desk"] == False
             status_module.inventory.remove("drawer key")
             return "You unlocked the door to the librarian's desk!"
         elif status_module.location == "library" and item == "gold key" and subject == "gold door":
