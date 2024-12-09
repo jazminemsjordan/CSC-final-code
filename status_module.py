@@ -41,7 +41,7 @@ touchscreen_directory_flavor = "The touchscreen directory glows faintly, display
 coat_hooks_flavor = "A neat row of coat hooks lines the wall. Most of them are empty, but one hook holds a scarf with 'Lost and Found' embroidered on it."
 charging_station_flavor = "The blinking red light appears to be a malfunction, and nothing else catches your attention."
 
-atrium_flavor = "You are in the atrium. The expansive central space features soaring ceilings, an open staircase, and wide windows that flood the room with light. Collaborative seating areas dot the floor, inviting group discussions.\nObjects of interest: indoor plants, central staircase, rusty door, old door.\nTo the North is Classroom 1. To the East is Classroom 2. To the West is the Stairwell. To the South is the Vestibule."
+atrium_flavor = "You are in the atrium. The expansive central space features soaring ceilings, an open staircase, and wide windows that flood the room with light. Collaborative seating areas dot the floor, inviting group discussions.\nObjects of interest: indoor plants, central staircase, old door.\nTo the North is Classroom 1. To the East is Classroom 2. To the West is the Stairwell. To the South is the Vestibule."
 atrium_objects = ["old door", "indoor plants", "central staircase"]
 
 old_door_flavor = "The old door is locked. The faded sign reads Classroom 2."
@@ -49,10 +49,10 @@ old_door_flavor = "The old door is locked. The faded sign reads Classroom 2."
 indoor_plants_flavor = "A collection of potted indoor plants adds a touch of green. Beneath one pot is a faint scratch, but there's nothing of importance."
 central_staircase_flavor = "The central staircase spirals gracefully to the upper levels, its clean lines uninterrupted by anything unusual."
 
-classroom_1_flavor = "You are in Classroom 1. A mix of modular tables and chairs fills the room, designed for interactive learning. A smartboard stretches across one wall, flanked by writable whiteboard surfaces.\nObjects of interest: smartboard, lab stools, supply drawers.\nTo the South is the Atrium. To the East is the supply closet."
+classroom_1_flavor = "You are in Classroom 1. A mix of modular tables and chairs fills the room, designed for interactive learning. A smartboard stretches across one wall, flanked by writable whiteboard surfaces.\nObjects of interest: smartboard, lab stools, supply drawers, rusty door.\nTo the South is the Atrium. To the East is the supply closet."
 classroom_1_objects = ["smartboard", "lab stools", "supply drawers", "rusty door"]
 
-rusty_door_flavor = "The rusted door to the supply closet is locked."
+rusty_door_flavor = "The rusty door to the supply closet is locked."
 
 smartboard_flavor = "The smartboard hums softly with a faint glow, displaying 'No Input Detected.' A USB port is visible, but you find nothing significant."
 lab_stools_flavor = "The lab stools are neatly arranged. Underneath one, theres an old piece of gum—gross, but nothing useful"
