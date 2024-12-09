@@ -50,7 +50,7 @@ indoor_plants_flavor = "A collection of potted indoor plants adds a touch of gre
 central_staircase_flavor = "The central staircase spirals gracefully to the upper levels, its clean lines uninterrupted by anything unusual."
 
 classroom_1_flavor = "You are in Classroom 1. A mix of modular tables and chairs fills the room, designed for interactive learning. A smartboard stretches across one wall, flanked by writable whiteboard surfaces.\nObjects of interest: smartboard, lab stools, supply drawers.\nTo the South is the Atrium. To the East is the supply closet."
-classroom_1_objects = ["smartboard", "lab stools", "supply drawer", "rusty door"]
+classroom_1_objects = ["smartboard", "lab stools", "supply drawers", "rusty door"]
 
 rusty_door_flavor = "The rusted door to the supply closet is locked."
 
