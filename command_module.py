@@ -331,10 +331,12 @@ def use(u_item, u_target):
             status_module.locked["classroom_3"] = False
             status_module.inventory.remove("shiny key")
             return "You unlocked the door! You can now enter Classroom 3."
-        elif status_module.location == "vestibule" and item == "keycard" and subject == "keycard door" and status_module.location == "vestibule" and item == "keycard" and subject == "door":
+        elif status_module.location == "vestibule" and item == "keycard" and subject == "keycard door" or status_module.location == "vestibule" and item == "keycard" and subject == "door":
             status_module.locked["exit"] = False
             status_module.inventory.remove("keycard")
             return "You unlocked the exit door! Now you can get out of here!"
+        else: 
+            return "Failed. Are you sure you're in the right place?"
     else:
         return "Failed: you don't have that."
     
