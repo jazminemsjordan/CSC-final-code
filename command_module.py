@@ -173,29 +173,30 @@ def clarify(thing):
     if thing == "key":
         check = input("There are lots of keys. Which do you mean? Options: shiny key, gold key, drawer key, old key, rusty key, keycard: ")
         if check == "shiny" or check == "shiny key":
-            x = "shiny key"
+            return "shiny key"
         elif check == "gold" or check == "gold door":
-            x = "gold key"
+            return "gold key"
         elif check == "drawer" or check == "drawer key":
-            x = "drawer key"
+            return "drawer key"
         elif check == "old" or check == "old key":
-            x = "old key"
+            return "old key"
         elif check == "rusty" or check == "rusty key":
-            x = "rusty key"
+            return "rusty key"
         elif check == "keycard" or check == "card":
-            x = "keycard"
+            return "keycard"
         else:
             return "Failed."
-    if thing == "door":
+    elif thing == "door":
         while True:
             check = input("You see more than one door in the library. \nWhich do you mean—the shiny door to the third classroom, or the golden door to the dean's office?")
             if check == "shiny" or check == "shiny door":
-                x = "shiny door"
+                return "shiny door"
             elif check == "gold" or check == "gold door":
-                x = "gold door"
+                return "gold door"
             else:
-                continue
-    return x
+                return "failed"
+    else:
+        return "Failed"
 
 def examine(u_subject):
     """ Player input a string of a subject to examine. 
@@ -298,7 +299,6 @@ def use(u_item, u_target):
     (eg. unlock door → new available direction for move).
     Remove item from inventory after use and show the available items in the inventory.
     """
-    item = ""
     if u_item == "key":
         item = clarify(u_item)
     else:
