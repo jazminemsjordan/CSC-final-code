@@ -311,28 +311,28 @@ def use(u_item, u_target):
     # Check if the target in an interactable object at location
     if item in status_module.inventory:
         if status_module.location == "atrium" and item == "old key" and subject == "old door" or status_module.location == "atrium" and item == "old key" and subject == "door":
-            status_module.locked["classroom_2"] == False
+            status_module.locked["classroom_2"] = False
             status_module.inventory.remove("old key") 
             return "You unlocked the door! You can now enter Classroom 2."
         elif status_module.location == "classroom_1" and item == "rusty key" and subject == "rusty door" or status_module.location == "classroom_1" and item == "rusty key" and subject == "door":
-            status_module.locked["supply_closet"] == False
+            status_module.locked["supply_closet"] = False
             status_module.inventory.remove("rusty key")
             return "You unlocked the door! You can now enter the supply closet."
         elif status_module.location == "library" and item == "drawer key" and subject == "librarian's desk" or status_module.location == "library" and item == "drawer key" and subject == "desk":
-            status_module.locked["librarian's desk"] == False
+            status_module.locked["librarian's desk"] = False
             status_module.inventory.remove("drawer key")
             status_module.inventory.append("shiny key")
             return "You unlocked the drawer of the librarian's desk! You found: shiny key."
         elif status_module.location == "library" and item == "gold key" and subject == "gold door":
-            status_module.locked["dean_office"] == False
+            status_module.locked["dean_office"] = False
             status_module.inventory.remove("gold key")
             return "You unlocked the door! You can now enter the dean's office."
         elif status_module.location == "library" and item == "shiny key" and subject == "shiny door":
-            status_module.locked["classroom_3"] == False
+            status_module.locked["classroom_3"] = False
             status_module.inventory.remove("shiny key")
             return "You unlocked the door! You can now enter Classroom 3."
         elif status_module.location == "vestibule" and item == "keycard" and subject == "keycard door" and status_module.location == "vestibule" and item == "keycard" and subject == "door":
-            status_module.locked["exit"] == False
+            status_module.locked["exit"] = False
             status_module.inventory.remove("keycard")
             return "You unlocked the exit door! Now you can get out of here!"
     else:
