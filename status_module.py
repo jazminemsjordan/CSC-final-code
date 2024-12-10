@@ -75,7 +75,7 @@ printer_flavor = "The 3D printer hums quietly. On the platform sits a newly prin
 power_outlets_flavor = "Rows of power outlets blink green. One outlet blinks red but reveals nothing unusual."
 robotics_kits_flavor = "The robotics kits are neatly arranged in plastic bins. None of them hold anything important."
 
-supply_closet_flavor = "You are in the Supply Closet. Compact and efficient, the room houses rows of labeled bins holding everything from lab coats to specialized tools.\nObjects of interest: equipment shelves, PPE cabinet.\nTo the east is Classroom 3."
+supply_closet_flavor = "You are in the Supply Closet. Compact and efficient, the room houses rows of labeled bins holding everything from lab coats to specialized tools.\nObjects of interest: equipment shelves, PPE cabinet.\nTo the west is Classroom 1."
 supply_closet_objects = ["equipment shelves", "PPE cabinet"]
 
 equipment_shelves_flavor = "The equipment shelves are packed with supplies—spools of wire, boxes of screws, and a small toolkit that seems unusually dusty. Beside it is a key. You found: old key."
