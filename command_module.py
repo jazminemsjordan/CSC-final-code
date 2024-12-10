@@ -173,22 +173,22 @@ def clarify(thing):
     if thing == "key":
         while True:
             check = input("There are lots of keys. Which do you mean? Options: shiny key, gold key, drawer key, old key, rusty key, keycard: ")
-            if check == "shiny" or "shiny key":
+            if check == "shiny" or check == "shiny key":
                 x = "shiny key"
                 break
-            elif check == "gold" or "gold door":
+            elif check == "gold" or check == "gold door":
                 x = "gold key"
                 break
-            elif check == "drawer" or "drawer key":
+            elif check == "drawer" or check == "drawer key":
                 x = "drawer key"
                 break
-            elif check == "old" or "old key":
+            elif check == "old" or check == "old key":
                 x = "old key"
                 break
-            elif check == "rusty" or "rusty key":
+            elif check == "rusty" or check == "rusty key":
                 x = "rusty key"
                 break
-            elif check == "keycard" or "card":
+            elif check == "keycard" or check == "card":
                 x = "keycard"
                 break
             else:
@@ -196,9 +196,9 @@ def clarify(thing):
     if thing == "door":
         while True:
             check = input("You see more than one door in the library. \nWhich do you mean—the shiny door to the third classroom, or the golden door to the dean's office?")
-            if check == "shiny" or "shiny door":
+            if check == "shiny" or check == "shiny door":
                 x = "shiny door"
-            elif check == "gold" or "gold door":
+            elif check == "gold" or check == "gold door":
                 x = "gold door"
             else:
                 continue
