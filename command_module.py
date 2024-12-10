@@ -1,37 +1,37 @@
 import status_module 
 # test comment
 
-def check_commands(input):
+def check_commands(user_input):
     """Compares player input to a list of possible gameplay commands.
     If command is valid, runs function command; else, it returns “invalid input” string and prompts the user to enter something else"""
-    split = input.split(maxsplit=1)
+    split = user_input.split(maxsplit=1)
     command = split[0]
     if len(split) > 1:
         qualifier = split[1]
     else:
-        qualifier == ""
+        qualifier = ""
     if command == "go":
         if qualifier == "":
-            direction = input("Where would you like to go? ")
-            return go(direction)
+            u_direction = input("Where would you like to go? ")
+            return go(u_direction)
         else:
             return go(qualifier)
     if command == "look" or command == "l":
         return look()
     if command == "examine" or command == "x":
         if qualifier == "":
-            object = input("What would you like to examine? ")
-            return examine(object)
+            u_object = input("What would you like to examine? ")
+            return examine(u_object)
         else:
             return examine(qualifier)
     if command == "use":
         if qualifier == "":
-            item = input("What would you like to use? ")
-            subject = input("On what will you use it on? ")
-            return use(item, subject)
+            u_item = input("What would you like to use? ")
+            u_subject = input("On what will you use it on? ")
+            return use(u_item, u_subject)
         else:
-            subject = input("Use on what? ")
-            return use(qualifier, subject)
+            u_subject = input("Use on what? ")
+            return use(qualifier, u_subject)
     if command == "inventory" or command == "i":
         return status_module.inventory 
     if command == "help" or command == "?":
@@ -41,8 +41,8 @@ def check_commands(input):
 
 def get_input():
     while True:
-        input = input("Enter your command: ")
-        result = check_commands(input)
+        user_input = input("Enter your command: ")
+        result = check_commands(user_input)
         print(result)
         
 
@@ -168,132 +168,124 @@ def look():
     if status_module.location == "balcony":
         return status_module.balcony_flavor
     
-def clarify(subject):
+def clarify(thing):
     '''clarifying multiple confusing inputs for commands'''
-    if subject == "key":
+    if thing == "key":
         while True:
             check = input(f"There are lots of keys. Which do you mean? \n Options: shiny key, gold key, drawer key, old key, rusty key, keycard.")
             if check == "shiny" or "shiny key":
                 return "shiny key"
-                break
             elif check == "gold" or "gold door":
                 return "gold key"
-                break
             elif check == "drawer" or "drawer key":
                 return "drawer key"
                 break
             elif check == "old" or "old key":
                 return "old key"
-                break
             elif check == "rusty" or "rusty key":
                 return "rusty key"
-                break
             elif check == "keycard" or "card":
                 return "keycard"
-                break
             else:
-                return "Not a valid answer: please choose a key."
-    if subject == "door":
+                continue
+    if thing == "door":
         while True:
             check = input(f"You see more than one door in the library. \nWhich do you mean—the shiny door to the third classroom, or the golden door to the dean's office?")
             if check == "shiny" or "shiny door":
                 return "shiny door"
-                break
             elif check == "gold" or "gold door":
                 return "gold door"
-                break
             else:
                 return "Not a valid answer: please choose a door."
 
-def examine(subject):
+def examine(u_subject):
     """ Player input a string of a subject to examine. 
     If the input is valid (subject is available in location), let player interact with each object (open, close, display item available, etc).
     """
     if status_module.location == "atrium":
-        if subject == "old door" or subject == "door":
+        if u_subject == "old door" or u_subject == "door":
             return status_module.old_door_flavor
-        if subject == "indoor plants" or subject == "plants":
+        if u_subject == "indoor plants" or u_subject == "plants":
             return status_module.indoor_plants_flavor
-        if subject == "central staircase" or subject == "stairs" or subject == "staircase":
+        if u_subject == "central staircase" or u_subject == "stairs" or u_subject == "staircase":
             return status_module.central_staircase_flavor
     elif status_module.location == "vestibule":
-        if subject == "keycard door" or subject == "door":
+        if u_subject == "keycard door" or u_subject == "door":
             return status_module.keycard_door_flavor
-        if subject == "touchscreen directory" or subject == "touchscreen":
+        if u_subject == "touchscreen directory" or u_subject == "touchscreen" or u_subject == "directory":
             return status_module.touchscreen_directory_flavor
-        if subject == "coat hooks" or subject == "hooks":
+        if u_subject == "coat hooks" or u_subject == "hooks":
             return status_module.coat_hooks_flavor
     elif status_module.location == "classroom_1": 
-        if subject == "smartboard" or subject == "board":
+        if u_subject == "smartboard" or u_subject == "board":
             return status_module.smartboard_flavor
-        if subject == "lab stools" or subject == "stools":
+        if u_subject == "lab stools" or u_subject == "stools":
             return status_module.lab_stools_flavor
-        if subject == "supply drawers" or subject == "drawers":
+        if u_subject == "supply drawers" or u_subject == "drawers":
             status_module.inventory.append("rusty key")
             return status_module.supply_drawers_flavor
-        if subject == "rusty door":
+        if u_subject == "rusty door":
             return status_module.rusty_door_flavor  
     elif status_module.location == "supply_closet":
-        if subject == "equipment shelves" or subject == "shelves":
+        if u_subject == "equipment shelves" or u_subject == "shelves":
             status_module.inventory.append("old key")
             return status_module.equipment_shelves_flavor
-        if subject == "PPE cabinet" or subject == "PPE" or subject == "cabinet":
+        if u_subject == "PPE cabinet" or u_subject == "PPE" or u_subject == "cabinet":
             return status_module.ppe_cabinet_flavor
     elif status_module.location == "classroom_2":
-        if subject == "lab benches" or subject == "benches":
+        if u_subject == "lab benches" or u_subject == "benches":
             status_module.inventory.append("drawer key")
             return status_module.lab_benches_flavor
-        if subject == "safety cabinet" or subject == "cabinet":
+        if u_subject == "safety cabinet" or u_subject == "cabinet":
             return status_module.safety_cabinet_flavor
-        if subject == "wall-mounted monitor" or subject == "monitor":
+        if u_subject == "wall-mounted monitor" or u_subject == "monitor":
             return status_module.wall_mounted_monitor_flavor
     elif status_module.location == "library":
-        if subject == "mahogany bookcase" or subject == "bookcase":
+        if u_subject == "mahogany bookcase" or u_subject == "bookcase":
             return status_module.mahogany_bookcase_flavor
-        if subject == "librarian's desk" or subject == "desk":
+        if u_subject == "librarian's desk" or u_subject == "desk":
             return status_module.librarian_desk_flavor
-        if subject == "study table" or subject == "table":
+        if u_subject == "study table" or u_subject == "table":
             return status_module.study_table_flavor
-        if subject == "gold door":
+        if u_subject == "gold door":
             return status_module.gold_door_flavor
-        if subject == "shiny door":
+        if u_subject == "shiny door":
             return status_module.shiny_door_flavor
-        if subject == "door":
-            clarify(subject)
+        if u_subject == "door":
+            clarify(u_subject)
     elif status_module.location == "balcony":
-        if subject == "glass railing" or subject == "railing":
+        if u_subject == "glass railing" or u_subject == "railing":
             return status_module.glass_railing_flavor
-        if subject == "potted plants" or subject == "plants":
+        if u_subject == "potted plants" or u_subject == "plants":
             return status_module.potted_plants_flavor
     elif status_module.location == "classroom_3":
-        if "print" in subject:            
+        if "print" in u_subject:            
             status_module.inventory.append("gold key")
             return status_module.printer_flavor
-        if "outlet" in subject:
+        if "outlet" in u_subject:
             return status_module.power_outlets_flavor
-        if "kit" in subject:
+        if "kit" in u_subject:
             return status_module.robotics_kits_flavor
     elif status_module.location == "dean_office":
-        if subject == "ergonomic desk" or subject == "desk":
+        if u_subject == "ergonomic desk" or u_subject == "desk":
             return status_module.ergonomic_desk_flavor
-        if subject == "bookshelf with scientific journals" or subject == "bookshelf" or subject == "shelf":
+        if u_subject == "bookshelf with scientific journals" or u_subject == "bookshelf" or u_subject == "shelf":
             return status_module.bookshelf_flavor
-        if subject == "Smith College crest plaque" or subject == "plaque" or subject == "crest":
+        if u_subject == "Smith College crest plaque" or u_subject == "plaque" or u_subject == "crest":
             status_module.inventory.append("keycard")
             return status_module.crest_plaque_flavor
     else:
         return "You can't find that object right now."
 
-
-def use(item, subject):
+def use(u_item, u_target):
     """ Player input a string of the name of item want to use and a string of the name of the targetted subject.
     If the input is valid (item available in inventory and the target is an interactable object at location), modify game state based on item effect 
     (eg. unlock door → new available direction for move).
     Remove item from inventory after use and show the available items in the inventory.
     """
-    if item == "key":
+    if u_item == "key":
         item = clarify(item)
-    if subject == "door" and status_module.location == "library":
+    if u_target == "door" and status_module.location == "library":
         subject = clarify(subject)
     # Check if the target in an interactable object at location
     if item in status_module.inventory:
