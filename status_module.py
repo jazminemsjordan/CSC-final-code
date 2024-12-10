@@ -68,7 +68,7 @@ lab_benches_flavor = "The lab benches are cluttered with abandoned experiments�
 safety_cabinet_flavor = "The safety cabinet is locked and contains standard safety gear—nothing useful."
 wall_mounted_monitor_flavor = "The wall-mounted monitor is dark, with a fingerprint smudge on the screen. It appears non-functional."
 
-classroom_3_flavor = "You are in Classroom 3. The room features workstations with power outlets, 3D printers, and toolkits neatly arranged along the walls.\nObjects of interest: 3D printer, soldering station, robotics kits.\nTo the South is the Library."
+classroom_3_flavor = "You are in Classroom 3. The room features workstations with power outlets, 3D printers, and toolkits neatly arranged along the walls.\nObjects of interest: 3D printer, power outlets, robotics kits.\nTo the South is the Library."
 classroom_3_objects = ["3D printer", "power outlets", "robotics kits"]
 
 printer_flavor = "The 3D printer hums quietly. On the platform sits a newly printed object—a gold key is put next to the unfinished project. You found: gold key."
