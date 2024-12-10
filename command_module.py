@@ -172,14 +172,13 @@ def clarify(thing):
     '''clarifying multiple confusing inputs for commands'''
     if thing == "key":
         while True:
-            check = input(f"There are lots of keys. Which do you mean? \n Options: shiny key, gold key, drawer key, old key, rusty key, keycard.")
+            check = input("There are lots of keys. Which do you mean? Options: shiny key, gold key, drawer key, old key, rusty key, keycard: ")
             if check == "shiny" or "shiny key":
                 return "shiny key"
             elif check == "gold" or "gold door":
                 return "gold key"
             elif check == "drawer" or "drawer key":
                 return "drawer key"
-                break
             elif check == "old" or "old key":
                 return "old key"
             elif check == "rusty" or "rusty key":
@@ -190,7 +189,7 @@ def clarify(thing):
                 continue
     if thing == "door":
         while True:
-            check = input(f"You see more than one door in the library. \nWhich do you mean—the shiny door to the third classroom, or the golden door to the dean's office?")
+            check = input("You see more than one door in the library. \nWhich do you mean—the shiny door to the third classroom, or the golden door to the dean's office?")
             if check == "shiny" or "shiny door":
                 return "shiny door"
             elif check == "gold" or "gold door":
