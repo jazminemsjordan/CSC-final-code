@@ -205,77 +205,93 @@ def examine(u_subject):
     if status_module.location == "atrium":
         if u_subject == "old door" or u_subject == "door":
             return status_module.old_door_flavor
-        if u_subject == "indoor plants" or u_subject == "plants":
+        elif u_subject == "indoor plants" or u_subject == "plants":
             return status_module.indoor_plants_flavor
-        if u_subject == "central staircase" or u_subject == "stairs" or u_subject == "staircase":
+        elif u_subject == "central staircase" or u_subject == "stairs" or u_subject == "staircase":
             return status_module.central_staircase_flavor
+        else:
+            return "You can't find that object right now."
     elif status_module.location == "vestibule":
         if u_subject == "keycard door" or u_subject == "door":
             return status_module.keycard_door_flavor
-        if u_subject == "touchscreen directory" or u_subject == "touchscreen" or u_subject == "directory":
+        elif u_subject == "touchscreen directory" or u_subject == "touchscreen" or u_subject == "directory":
             return status_module.touchscreen_directory_flavor
-        if u_subject == "coat hooks" or u_subject == "hooks":
+        elif u_subject == "coat hooks" or u_subject == "hooks":
             return status_module.coat_hooks_flavor
+        else:
+            return "You can't find that object right now."
     elif status_module.location == "classroom_1": 
         if u_subject == "smartboard" or u_subject == "board":
             return status_module.smartboard_flavor
-        if u_subject == "lab stools" or u_subject == "stools":
+        elif u_subject == "lab stools" or u_subject == "stools":
             return status_module.lab_stools_flavor
-        if u_subject == "supply drawers" or u_subject == "drawers":
+        elif u_subject == "supply drawers" or u_subject == "drawers":
             status_module.inventory.append("rusty key")
             return status_module.supply_drawers_flavor
-        if u_subject == "rusty door":
-            return status_module.rusty_door_flavor  
+        elif u_subject == "rusty door":
+            return status_module.rusty_door_flavor
+        else:
+            return "You can't find that object right now."  
     elif status_module.location == "supply_closet":
         if u_subject == "equipment shelves" or u_subject == "shelves":
             status_module.inventory.append("old key")
             return status_module.equipment_shelves_flavor
-        if u_subject == "PPE cabinet" or u_subject == "PPE" or u_subject == "cabinet":
+        elif u_subject == "PPE cabinet" or u_subject == "PPE" or u_subject == "cabinet":
             return status_module.ppe_cabinet_flavor
+        else:
+            return "You can't find that object right now."
     elif status_module.location == "classroom_2":
         if u_subject == "lab benches" or u_subject == "benches":
             status_module.inventory.append("drawer key")
             return status_module.lab_benches_flavor
-        if u_subject == "safety cabinet" or u_subject == "cabinet":
+        elif u_subject == "safety cabinet" or u_subject == "cabinet":
             return status_module.safety_cabinet_flavor
-        if u_subject == "wall-mounted monitor" or u_subject == "monitor":
+        elif u_subject == "wall-mounted monitor" or u_subject == "monitor":
             return status_module.wall_mounted_monitor_flavor
+        else:
+            return "You can't find that object right now."
     elif status_module.location == "library":
         if u_subject == "mahogany bookcase" or u_subject == "bookcase":
             return status_module.mahogany_bookcase_flavor
-        if u_subject == "librarian's desk" or u_subject == "desk":
+        elif u_subject == "librarian's desk" or u_subject == "desk":
             return status_module.librarian_desk_flavor
-        if u_subject == "study table" or u_subject == "table":
+        elif u_subject == "study table" or u_subject == "table":
             return status_module.study_table_flavor
-        if u_subject == "gold door":
+        elif u_subject == "gold door":
             return status_module.gold_door_flavor
-        if u_subject == "shiny door":
+        elif u_subject == "shiny door":
             return status_module.shiny_door_flavor
-        if u_subject == "door":
+        elif u_subject == "door":
             clarify(u_subject)
+        else:
+            return "You can't find that object right now."
     elif status_module.location == "balcony":
         if u_subject == "glass railing" or u_subject == "railing":
             return status_module.glass_railing_flavor
-        if u_subject == "potted plants" or u_subject == "plants":
+        elif u_subject == "potted plants" or u_subject == "plants":
             return status_module.potted_plants_flavor
+        else:
+            return "You can't find that object right now."
     elif status_module.location == "classroom_3":
         if "print" in u_subject:            
             status_module.inventory.append("gold key")
             return status_module.printer_flavor
-        if "outlet" in u_subject:
+        elif "outlet" in u_subject:
             return status_module.power_outlets_flavor
-        if "kit" in u_subject:
+        elif "kit" in u_subject:
             return status_module.robotics_kits_flavor
+        else:
+            return "You can't find that object right now."
     elif status_module.location == "dean_office":
         if u_subject == "ergonomic desk" or u_subject == "desk":
             return status_module.ergonomic_desk_flavor
-        if u_subject == "bookshelf with scientific journals" or u_subject == "bookshelf" or u_subject == "shelf":
+        elif u_subject == "bookshelf with scientific journals" or u_subject == "bookshelf" or u_subject == "shelf":
             return status_module.bookshelf_flavor
-        if u_subject == "Smith College crest plaque" or u_subject == "plaque" or u_subject == "crest":
+        elif u_subject == "Smith College crest plaque" or u_subject == "plaque" or u_subject == "crest":
             status_module.inventory.append("keycard")
             return status_module.crest_plaque_flavor
-    else:
-        return "You can't find that object right now."
+        else:
+            return "You can't find that object right now."
 
 def use(u_item, u_target):
     """ Player input a string of the name of item want to use and a string of the name of the targetted subject.
