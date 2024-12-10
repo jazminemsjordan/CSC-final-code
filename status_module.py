@@ -19,6 +19,9 @@ def instructions():
 def end_menu():
     """ Shows end data and stats, variable counter for turns taken added every time a command is successful."""
     print("Congratulations! You win!")
+    print(f"Turns taken = {turn} turns.")
+    exit()
+
 
 def start_menu():
     """ Call instructions function and ask whether to begin a new game or reset."""
@@ -27,7 +30,7 @@ def start_menu():
     print("Oh no! The doors locked for Christmas break while you were still inside the hall. Can you escape and make it home for the holidays?")
     initialize()
     start = input("Start game: Y/N?")
-    if start == "Y":
+    if start == "Y" or start == "y":
         instructions()
     else:
         exit()
