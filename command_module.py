@@ -171,28 +171,21 @@ def look():
 def clarify(thing):
     '''clarifying multiple confusing inputs for commands'''
     if thing == "key":
-        while True:
-            check = input("There are lots of keys. Which do you mean? Options: shiny key, gold key, drawer key, old key, rusty key, keycard: ")
-            if check == "shiny" or check == "shiny key":
-                x = "shiny key"
-                break
-            elif check == "gold" or check == "gold door":
-                x = "gold key"
-                break
-            elif check == "drawer" or check == "drawer key":
-                x = "drawer key"
-                break
-            elif check == "old" or check == "old key":
-                x = "old key"
-                break
-            elif check == "rusty" or check == "rusty key":
-                x = "rusty key"
-                break
-            elif check == "keycard" or check == "card":
-                x = "keycard"
-                break
-            else:
-                continue
+        check = input("There are lots of keys. Which do you mean? Options: shiny key, gold key, drawer key, old key, rusty key, keycard: ")
+        if check == "shiny" or check == "shiny key":
+            x = "shiny key"
+        elif check == "gold" or check == "gold door":
+            x = "gold key"
+        elif check == "drawer" or check == "drawer key":
+            x = "drawer key"
+        elif check == "old" or check == "old key":
+            x = "old key"
+        elif check == "rusty" or check == "rusty key":
+            x = "rusty key"
+        elif check == "keycard" or check == "card":
+            x = "keycard"
+        else:
+            return "Failed."
     if thing == "door":
         while True:
             check = input("You see more than one door in the library. \nWhich do you mean—the shiny door to the third classroom, or the golden door to the dean's office?")
@@ -203,6 +196,7 @@ def clarify(thing):
             else:
                 continue
     return x
+
 def examine(u_subject):
     """ Player input a string of a subject to examine. 
     If the input is valid (subject is available in location), let player interact with each object (open, close, display item available, etc).
