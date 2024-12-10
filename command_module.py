@@ -104,7 +104,7 @@ def go(direction):
             return "Failed: you can't go that way."
     if status_module.location == "classroom_2":
         if direction == "west" or direction == "w":
-            status_module.location == "atrium"
+            status_module.location = "atrium"
             return "Success!"
         else:
            return "Failed: you can't go that way."
