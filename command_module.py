@@ -174,29 +174,35 @@ def clarify(thing):
         while True:
             check = input("There are lots of keys. Which do you mean? Options: shiny key, gold key, drawer key, old key, rusty key, keycard: ")
             if check == "shiny" or "shiny key":
-                return "shiny key"
+                x = "shiny key"
+                break
             elif check == "gold" or "gold door":
-                return "gold key"
+                x = "gold key"
+                break
             elif check == "drawer" or "drawer key":
-                return "drawer key"
+                x = "drawer key"
+                break
             elif check == "old" or "old key":
-                return "old key"
+                x = "old key"
+                break
             elif check == "rusty" or "rusty key":
-                return "rusty key"
+                x = "rusty key"
+                break
             elif check == "keycard" or "card":
-                return "keycard"
+                x = "keycard"
+                break
             else:
                 continue
     if thing == "door":
         while True:
             check = input("You see more than one door in the library. \nWhich do you mean—the shiny door to the third classroom, or the golden door to the dean's office?")
             if check == "shiny" or "shiny door":
-                return "shiny door"
+                x = "shiny door"
             elif check == "gold" or "gold door":
-                return "gold door"
+                x = "gold door"
             else:
-                return "Not a valid answer: please choose a door."
-
+                continue
+    return x
 def examine(u_subject):
     """ Player input a string of a subject to examine. 
     If the input is valid (subject is available in location), let player interact with each object (open, close, display item available, etc).
