@@ -301,12 +301,12 @@ def use(u_item, u_target):
     """
     item = ""
     if u_item == "key":
-        item = clarify(item)
+        item = clarify(u_item)
     else:
         item = u_item
     subject = ""
     if u_target == "door" and status_module.location == "library":
-        subject = clarify(subject)
+        subject = clarify(u_target)
     else:
         subject = u_target
     # Check if the target in an interactable object at location
