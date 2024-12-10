@@ -13,7 +13,7 @@ def initialize():
     win = False
     
 def instructions():
-    print("To play: first enter a general command (go, examine, or use). Then, input specifics as prompted (which direction, what to use, etc.")
+    print("To play: enter a simple command: 'go' to move, look(l) to see the room you're in, examine(x) to investigate an object\n, help(?) to view commands, or inventory(i) to view inventory.\n Examples include 'go north' or 'look' or 'examine bookcase'.")
     
 
 def end_menu():
@@ -78,7 +78,7 @@ supply_closet_objects = ["equipment shelves", "PPE cabinet"]
 equipment_shelves_flavor = "The equipment shelves are packed with supplies—spools of wire, boxes of screws, and a small toolkit that seems unusually dusty. Beside it is a key. You found: old key."
 ppe_cabinet_flavor = "The PPE cabinet gleams under the light, filled with goggles and gloves but no hidden items."
 
-library_flavor = "You are in the library. Floor to ceiling bookshelves line the walls, with a few cozy looking chairs and couches in the center.\nObjects of interest: librarian desk, study table, mahogany bookcase.\nTo the north is Classroom 3. To the east is the Dean's Office. To the South is the balcony. To the West is the stairwell down to the atrium."
+library_flavor = "You are in the library. Floor to ceiling bookshelves line the walls, with a few cozy looking chairs and couches in the center.\nObjects of interest: librarian's desk, study table, mahogany bookcase.\nTo the north is Classroom 3. To the east is the Dean's Office. To the South is the balcony. To the West is the stairwell down to the atrium."
 library_objects = ["librarian's desk", "study table", "mahogany bookcase", "shiny door", "gold door"]
 
 mahogany_bookcase_flavor = "There's a variety of colorful books on all different topics, but none seem useful right now."
