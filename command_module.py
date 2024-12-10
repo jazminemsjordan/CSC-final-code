@@ -299,10 +299,16 @@ def use(u_item, u_target):
     (eg. unlock door → new available direction for move).
     Remove item from inventory after use and show the available items in the inventory.
     """
+    item = ""
     if u_item == "key":
         item = clarify(item)
+    else:
+        item = u_item
+    subject = ""
     if u_target == "door" and status_module.location == "library":
         subject = clarify(subject)
+    else:
+        subject = u_target
     # Check if the target in an interactable object at location
     if item in status_module.inventory:
         if status_module.location == "atrium" and item == "old key" and subject == "old door":
