@@ -1,12 +1,59 @@
-# %%
+# +
 import status_module 
 # test comment
 
-# testing sync abilities --- should link to .ipynb
-# if you're Evelyn you can also ignore this, it's for a different program lol
+# !jupytext --to notebook C:\Misc\Coding\SCHOOL\CSC-final-code\command_module.py
+# !jupytext --to notebook C:\Misc\Coding\SCHOOL\CSC-final-code\status_module.py
+# !jupytext --to notebook C:\Misc\Coding\SCHOOL\CSC-final-code\main.py
 
 
-# %%
+# -
+
+def check_commands(user_input):
+    """Compares player input to a list of possible gameplay commands.
+    If command is valid, runs function command; else, it returns “invalid input” string and prompts the user to enter something else"""
+    split = user_input.split(maxsplit=1)
+    command = split[0]
+    if len(split) > 1:
+        qualifier = split[1]
+    else:
+        qualifier = ""
+    if command == "go":
+        if qualifier == "":
+            u_direction = input("Where would you like to go? ")
+            return go(u_direction)
+        else:
+            return go(qualifier)
+    if command == "look" or command == "l":
+        return look()
+    if command == "examine" or command == "x":
+        if qualifier == "":
+            u_object = input("What would you like to examine? ")
+            return examine(u_object)
+        else:
+            return examine(qualifier)
+    if command == "use":
+        if qualifier == "":
+            u_item = input("What would you like to use? ")
+            u_subject = input("On what will you use it on? ")
+            return use(u_item, u_subject)
+        else:
+            u_subject = input("Use on what? ")
+            return use(qualifier, u_subject)
+    if command == "inventory" or command == "i":
+        return status_module.inventory 
+    if command == "help" or command == "?":
+        return status_module.instructions()
+    else:
+        return "Failed: not a valid command."
+
+def get_input():
+    while True:
+        user_input = input("Enter your command: ")
+        result = check_commands(user_input)
+        print(result)
+
+
 def go(direction):
     """ Player input a string of direction to move (north, south, west, east).
     If the input is valid (available direction - path is available, not locked), move the player in the input direction; 
@@ -107,7 +154,6 @@ def go(direction):
         else:
             return "Failed: you can't go that way."
 
-# %%
 def look():
     """ Provide a description of the player's current location (based on the location variable from go(direction)), including exits, interactable objects
     """
@@ -130,7 +176,6 @@ def look():
     if status_module.location == "balcony":
         return status_module.balcony_flavor
 
-# %%
 def clarify(thing):
     '''clarifying multiple confusing inputs for commands'''
     if thing == "key":
@@ -161,7 +206,6 @@ def clarify(thing):
     else:
         return "Failed"
 
-# %%
 def examine(u_subject):
     """ Player input a string of a subject to examine. 
     If the input is valid (subject is available in location), let player interact with each object (open, close, display item available, etc).
@@ -257,7 +301,6 @@ def examine(u_subject):
         else:
             return "You can't find that object right now."
 
-# %%
 def use(u_item, u_target):
     """ Player input a string of the name of item want to use and a string of the name of the targetted subject.
     If the input is valid (item available in inventory and the target is an interactable object at location), modify game state based on item effect 
@@ -305,57 +348,8 @@ def use(u_item, u_target):
     else:
         return "Failed: you don't have that."
 
-# %%
-def check_commands(user_input):
-    """Compares player input to a list of possible gameplay commands.
-    If command is valid, runs function command; else, it returns “invalid input” string and prompts the user to enter something else"""
-    split = user_input.split(maxsplit=1)
-    command = split[0]
-    if len(split) > 1:
-        qualifier = split[1]
-    else:
-        qualifier = ""
-    if command == "go":
-        if qualifier == "":
-            u_direction = input("Where would you like to go? ")
-            return go(u_direction)
-        else:
-            return go(qualifier)
-    if command == "look" or command == "l":
-        return look()
-    if command == "examine" or command == "x":
-        if qualifier == "":
-            u_object = input("What would you like to examine? ")
-            return examine(u_object)
-        else:
-            return examine(qualifier)
-    if command == "use":
-        if qualifier == "":
-            u_item = input("What would you like to use? ")
-            u_subject = input("On what will you use it on? ")
-            return use(u_item, u_subject)
-        else:
-            u_subject = input("Use on what? ")
-            return use(qualifier, u_subject)
-    if command == "inventory" or command == "i":
-        return status_module.inventory 
-    if command == "help" or command == "?":
-        return status_module.instructions()
-    else:
-        return "Failed: not a valid command."
-
-# %%
-def get_input():
-    while True:
-        user_input = input("Enter your command: ")
-        result = check_commands(user_input)
-        print(result)
-
-
-# %%
 def save_game():
     ''' writes project file with status module: inventory, location, etc.)'''
 
-# %%
 def load_game():
     '''reads file data and loads variables from past game'''
