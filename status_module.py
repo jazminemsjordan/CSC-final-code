@@ -49,7 +49,7 @@ keycard_door_flavor = "The exit to the building, barred by a large mechanical do
 
 # %%
 touchscreen_directory_flavor = "The touchscreen directory glows faintly, displaying a map of the building. A sticky note tucked into the frame reads, 'Merry Christmas?!'"
-coat_hooks_flavor = "A neat row of coat hooks lines the wall. Most of them are empty, but one hook holds a scarf with 'Lost and Found' embroidered on it."
+coat_hooks_flavor = "A neat row of coat hooks lines the wall. Most of them are empty, but one hook holds a scarf with 'Christmas HO HO HO' embroidered on it."
 charging_station_flavor = "The blinking red light appears to be a malfunction, and nothing else catches your attention."
 
 # %%
@@ -61,7 +61,7 @@ old_door_flavor = "The faded sign besides the old door reads Classroom 2."
 
 # %%
 indoor_plants_flavor = "A collection of potted indoor plants adds a touch of green. Beneath one pot is a faint scratch, but there's nothing of importance."
-central_staircase_flavor = "The central staircase spirals gracefully to the upper levels, its clean lines uninterrupted by anything unusual."
+central_staircase_flavor = "The central staircase spirals to the upper levels, its clean lines uninterrupted by anything unusual."
 
 # %%
 classroom_1_flavor = "You are in Classroom 1. A mix of modular tables and chairs fills the room, designed for interactive learning. A smartboard stretches across one wall, flanked by writable whiteboard surfaces.\nObjects of interest: smartboard, lab stools, supply drawers, rusty door.\nTo the South is the Atrium. To the East is the supply closet."
@@ -71,9 +71,9 @@ classroom_1_objects = ["smartboard", "lab stools", "supply drawers", "rusty door
 rusty_door_flavor = "The rusty door to the supply closet is old and weathered."
 
 # %%
-smartboard_flavor = "The smartboard hums softly with a faint glow, displaying 'No Input Detected.' A USB port is visible, but you find nothing significant."
+smartboard_flavor = "The smartboard faintly glows, displaying 'No Input Detected.' A USB port is visible, but you find nothing significant."
 lab_stools_flavor = "The lab stools are neatly arranged. Underneath one, theres an old piece of gum—gross, but nothing useful"
-supply_drawers_flavor = "A row of drawers lines the room. They are all empty, except for an assortment of old lab tools and a flash of metal. You found: rusty key."
+supply_drawers_flavor = "A row of drawers lines the room. They are all empty, except for an mix of old lab tools and a flash of metal. You found: rusty key."
 
 # %%
 classroom_2_flavor = "You are in Classroom 2. Rows of lab benches are equipped with sinks and microscopes, with overhead fume hoods lining the perimeter. The room is primed for hands-on experimentation.\nObjects of interest: lab benches, safety cabinet, wall-mounted monitor.\nTo the West is the Atrium."
@@ -99,7 +99,7 @@ supply_closet_objects = ["equipment shelves", "PPE cabinet"]
 
 # %%
 equipment_shelves_flavor = "The equipment shelves are packed with supplies—spools of wire, boxes of screws, and a small toolkit that seems unusually dusty. Beside it is a key. You found: old key."
-ppe_cabinet_flavor = "The PPE cabinet gleams under the light, filled with goggles and gloves but no hidden items."
+ppe_cabinet_flavor = "The PPE cabinet is filled with goggles and gloves but no hidden items."
 
 # %%
 library_flavor = "You are in the library. Floor to ceiling bookshelves line the walls, with a few cozy looking chairs and couches in the center.\nObjects of interest: librarian's desk, study table, mahogany bookcase, shiny door, gold door.\nTo the north is Classroom 3. To the east is the Dean's Office. To the South is the balcony. To the West is the stairwell down to the atrium."
