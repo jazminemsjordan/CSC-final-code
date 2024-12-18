@@ -18,7 +18,7 @@ def go(direction):
         if direction == "north" or direction == "n":
             status_module.location = "atrium"
             return "Success!"
-        if direction == "south":
+        if direction == "south" or direction == "s":
             if status_module.locked["exit"] == True:
                 return "Failed: the exit is locked."
             else: 
@@ -346,10 +346,9 @@ def check_commands(user_input):
 
 # %%
 def get_input():
-    while True:
-        user_input = input("Enter your command: ")
-        result = check_commands(user_input)
-        print(result)
+    user_input = input("Enter your command: ")
+    result = check_commands(user_input)
+    print(result)
 
 
 # %%
